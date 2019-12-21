@@ -72,9 +72,11 @@ print(f"--------------\nWinner is: {keyMax}")
 f= open("pyPollhw.txt","w+")
 
 #Puts info into csv
+f.write("Poll Analysis\n---------------------")
 f.write(f"Total Votes: {counter}\n")
 f.write(f"Khan: %{KhanCount / counter * 100} ({KhanCount}\n)")
 f.write(f"Correy: %{CorreyCount / counter * 100} ({CorreyCount})\n")
 f.write(f"Li: %{LiCount / counter * 100} ({LiCount})\n")
 f.write(f"O'Tooley: %{TooleyCount / counter * 100} ({TooleyCount})\n")
+f.write(f"--------------\nWinner is: {keyMax}")
 f.close()
