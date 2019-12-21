@@ -54,6 +54,7 @@ with open(bank_csv, 'r') as csvfile:
             TooleyCount += 1
 
 # Prints everything
+print("Poll Analysis\n---------------------")
 print(f"Total Votes: {counter}")
 print(f"Khan: %{KhanCount / counter * 100} ({KhanCount})")
 print(f"Correy: %{CorreyCount / counter * 100} ({CorreyCount})")
@@ -65,15 +66,15 @@ candidates = {"Khan": KhanCount, "O'Tooley": TooleyCount, "Li": LiCount, "Correy
 
 #Gets the max value of dictionary and prints the item
 keyMax = max(candidates.items(), key = operator.itemgetter(1))[0]
-print(f"Winner is: {keyMax}")
+print(f"--------------\nWinner is: {keyMax}")
 
 # Creates csv
 f= open("pyPollhw.txt","w+")
 
 #Puts info into csv
-f.write(f"Total Votes: {counter}")
-f.write(f"Khan: %{KhanCount / counter * 100} ({KhanCount})")
-f.write(f"Correy: %{CorreyCount / counter * 100} ({CorreyCount})")
-f.write(f"Li: %{LiCount / counter * 100} ({LiCount})")
-f.write(f"O'Tooley: %{TooleyCount / counter * 100} ({TooleyCount})")
+f.write(f"Total Votes: {counter}\n")
+f.write(f"Khan: %{KhanCount / counter * 100} ({KhanCount}\n)")
+f.write(f"Correy: %{CorreyCount / counter * 100} ({CorreyCount})\n")
+f.write(f"Li: %{LiCount / counter * 100} ({LiCount})\n")
+f.write(f"O'Tooley: %{TooleyCount / counter * 100} ({TooleyCount})\n")
 f.close()
